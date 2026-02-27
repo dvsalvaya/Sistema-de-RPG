@@ -1,8 +1,8 @@
-package ficha
+package personagem
 
 import (
+	"RPG/modelos"
 	"fmt"
-	"go/rpg/modelos"
 )
 
 func Criar_personagem() modelos.Personagem {
@@ -32,4 +32,18 @@ func Criar_personagem() modelos.Personagem {
 	novo_personagem.Exp = 0.0
 	novo_personagem.Level = 1
 	return novo_personagem
+}
+
+func Up_level(perso modelos.Personagem) {
+	switch perso.Classe {
+	case 1:
+		perso.Forca = perso.Forca + 20
+		perso.Vida = perso.Vida + 50
+	case 2:
+		perso.Inteligencia = perso.Inteligencia + 20
+		perso.Vida = perso.Vida + 30
+	}
+	perso.Determinacao++
+	perso.Exp = 0.00
+	perso.Level++
 }

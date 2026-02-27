@@ -1,11 +1,11 @@
 package main
 
 import (
-	"/home/duck/Projetos/go/rpg/ficha"
+	"RPG/personagem"
 	"fmt"
 )
 
 func main() {
-	pero := ficha.Criar_personagem()
-	fmt.Printf("Nome: %s\nForça: %d", pero.nome, pero.forca)
+	pero := personagem.Criar_personagem()
+	fmt.Printf("Nome: %s\nForça: %d", pero.Nome, pero.Forca)
 }
