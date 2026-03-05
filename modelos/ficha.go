@@ -1,6 +1,7 @@
 package modelos
 
 type Personagem struct {
+	ID           int
 	Nome         string
 	Idade        int
 	Classe       int
@@ -8,6 +9,6 @@ type Personagem struct {
 	Forca        int
 	Vida         int
 	Inteligencia int
-	Exp          float64
+	Exp          int
 	Level        int
 }

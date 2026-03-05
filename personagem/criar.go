@@ -3,6 +3,7 @@ package personagem
 import (
 	"RPG/modelos"
 	"fmt"
+	"math/rand"
 )
 
 func Criar_personagem() modelos.Personagem {
@@ -29,21 +30,10 @@ func Criar_personagem() modelos.Personagem {
 	fmt.Print("Digite a inteligencia do personagem\n-> ")
 	fmt.Scan(&novo_personagem.Inteligencia)
 
-	novo_personagem.Exp = 0.0
+	novo_personagem.Exp = 0
 	novo_personagem.Level = 1
-	return novo_personagem
-}
 
-func Up_level(perso modelos.Personagem) {
-	switch perso.Classe {
-	case 1:
-		perso.Forca = perso.Forca + 20
-		perso.Vida = perso.Vida + 50
-	case 2:
-		perso.Inteligencia = perso.Inteligencia + 20
-		perso.Vida = perso.Vida + 30
-	}
-	perso.Determinacao++
-	perso.Exp = 0.00
-	perso.Level++
+	//No futuro tem que mudar essa logica, pq assim pode vim dois persogens com o mesmo ID
+	novo_personagem.ID = rand.Intn(99)
+	return novo_personagem
 }
