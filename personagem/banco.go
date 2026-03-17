@@ -6,6 +6,7 @@ import (
 	"fmt"
 
 	_ "github.com/glebarez/sqlite"
+	_ "github.com/mattn/go-sqlite3"
 )
 
 func CriarBanco() {
@@ -22,10 +23,10 @@ func CriarBanco() {
 		nome TEXT,
 		forca INTEGER,
 		vida INTEGER,
-		classe INTEGER
-		determinacao INTEGER
-		inteligencia INTEGER
-		exp INTEGER
+		classe INTEGER,
+		determinacao INTEGER,
+		inteligencia INTEGER,
+		exp INTEGER,
 		level INTEGER
 	);
 	`
@@ -88,7 +89,7 @@ func ListarPersonagens() {
 			fmt.Println("Erro ao ler personagem:", err)
 			return
 		}
-		fmt.Printf("ID: %d, Nome: %s, Força: %d, Vida: %d, Classe: %d, Determinação: %d, Inteligência: %d, Exp: %.2f, Level: %d\n",
+		fmt.Printf("ID: %d, Nome: %s, Força: %d, Vida: %d, Classe: %d, Determinação: %d, Inteligência: %d, Exp: %d, Level: %d\n",
 			id, nome, forca, vida, classe, determinacao, inteligencia, exp, level)
 	}
 }

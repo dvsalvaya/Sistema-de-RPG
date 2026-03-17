@@ -3,7 +3,6 @@ package personagem
 import (
 	"RPG/modelos"
 	"fmt"
-	"math/rand"
 )
 
 func Criar_personagem() modelos.Personagem {
@@ -34,6 +33,5 @@ func Criar_personagem() modelos.Personagem {
 	novo_personagem.Level = 1
 
 	//No futuro tem que mudar essa logica, pq assim pode vim dois persogens com o mesmo ID
-	novo_personagem.ID = rand.Intn(99)
 	return novo_personagem
 }

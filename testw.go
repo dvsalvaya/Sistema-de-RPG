@@ -14,7 +14,7 @@ func main() {
 	case 1:
 		perso := personagem.Criar_personagem()
 		personagem.InserirPersonagem(perso.Nome, perso.Forca, perso.Vida, perso.Classe, perso.Determinacao, perso.Inteligencia, perso.Exp, perso.Level)
-		fmt.Printf("Personagem criado: %+v\nID: %d\nNome: %s\nVida: %d\nClasse: %d\nForça: %d\nDeterminação: %d\nInteligência: %d\nExp: %.2f\nLevel: %d\n", perso, perso.ID, perso.Nome, perso.Vida, perso.Classe, perso.Forca, perso.Determinacao, perso.Inteligencia, perso.Exp, perso.Level)
+		fmt.Printf("Personagem criado: %+v\nID: %d\nNome: %s\nVida: %d\nClasse: %d\nForça: %d\nDeterminação: %d\nInteligência: %d\nExp: %d\nLevel: %d\n", perso, perso.ID, perso.Nome, perso.Vida, perso.Classe, perso.Forca, perso.Determinacao, perso.Inteligencia, perso.Exp, perso.Level)
 		fmt.Println("Personagem salvo no banco de dados!")
 	case 2:
 		var id int
